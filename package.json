@@ -1,6 +1,6 @@
 {
 	"name": "tailwindy",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An 11ty starter with TailwindCSS, PostCSS, PurgeCSS and other modern tools",
 	"main": "index.js",
 	"scripts": {
