@@ -1,0 +1,41 @@
+{
+	"name": "tailwindy",
+	"version": "0.0.1",
+	"description": "An 11ty starter with TailwindCSS, PostCSS, PurgeCSS and other modern tools",
+	"main": "index.js",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"eleventy:default": "eleventy",
+		"eleventy:watch": "eleventy --watch",
+		"styles:prod": "postcss src/styles/tailwind.css --output ./dist/styles/app.css",
+		"styles:dev": "postcss src/styles/tailwind.css --output ./dist/styles/app.css",
+		"scripts:prod": "webpack --mode=production",
+		"scripts:dev": "webpack --mode=development",
+		"serve": "light-server -c .lightserverrc",
+		"dev": "cross-env NODE_ENV=development npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+		"dev:debug": "DEBUG=* npm run dev",
+		"build": "cross-env NODE_ENV=production run-s clean scripts:prod eleventy:default styles:prod --print-label"
+	},
+	"author": "Brandon Pittman",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.8.3",
+		"@babel/core": "^7.4.4",
+		"@babel/preset-env": "^7.4.4",
+		"@fullhuman/postcss-purgecss": "^1.2.0",
+		"babel-loader": "^8.0.6",
+		"cross-env": "^5.2.0",
+		"light-server": "^2.6.2",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^6.1.2",
+		"postcss-import": "^12.0.1",
+		"postcss-preset-env": "^6.7.0",
+		"tailwindcss": "^1.0.3",
+		"tailwindcss-plugin-fancy": "0.0.11",
+		"webpack": "^4.31.0",
+		"webpack-cli": "^3.3.2"
+	},
+	"dependencies": {
+		"acorn": "^6.1.1"
+	}
+}

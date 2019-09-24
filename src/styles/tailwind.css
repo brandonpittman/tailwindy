@@ -1,0 +1,26 @@
+@tailwind base;
+
+body {
+	@apply bg-gray-100;
+}
+
+a {
+	@apply text-teal-600 no-underline border-b-2 border-teal-200;
+}
+
+a:hover {
+	@apply text-teal-700 border-teal-600;
+}
+
+h1,h2 {
+	@apply font-black;
+}
+
+h3 {
+	@apply font-bold;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
