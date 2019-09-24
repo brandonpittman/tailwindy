@@ -9,27 +9,27 @@ Features:
 - [light-server](https://github.com/txchen/light-server)
 - [PostCSS](https://postcss.org/)
 
-- The Tailwind CSS config build chain (NB tailwind.config.js is only compiled at each hard run of the script so you will need to quit and re-run `npm run dev` if you make changes during local development)
-- Purge CSS conditionally run at build, but not during local development
+- Purge CSS only runs for production builds.
 
 ## Getting Started
 
-Clone this repo and install all dependencies using npm:
+Clone this repo and install its dependencies: `npm install`.
 
-### How to use in development
+### Development
 
 ```
-$ npm run dev
+❯ npm run dev
 ```
+
  And in debug mode:
  
 ```
-$ npm run dev:debug
+❯ npm run dev:debug
 ```
 
 You can view the rendered site at the given access URL served up by light-server:
 ```
-$ light-server is listening at http://localhost:4000
+❯ light-server is listening at http://localhost:4000
 ```
 
 The local url is configured in `.lightserverrc`
@@ -37,7 +37,7 @@ The local url is configured in `.lightserverrc`
 ### To build ready for production
 
 ```
-npm run build
+❯ npm run build
 ```
 
 Tai11s will build and optimize your code ready for deployment
