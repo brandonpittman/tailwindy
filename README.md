@@ -29,7 +29,7 @@ Clone this repo and install its dependencies: `npm install`.
 
 You can view the rendered site at the given access URL served up by light-server:
 ```
-❯ light-server is listening at http://localhost:4000
+❯ light-server is listening at http://localhost:8080
 ```
 
 The local url is configured in `.lightserverrc`
